@@ -1,0 +1,687 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09AC7AAFD9BAA7EF72C1EAAC /* Pods_SmartCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48FEDE4B4C80BD66293BFBE4 /* Pods_SmartCalendar.framework */; };
+		A3FC8642332EE14E994D633A /* Pods_SmartCalendarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689250BB973FF30D9668D18F /* Pods_SmartCalendarTests.framework */; };
+		C11591AC233A70790066AB93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C11591AB233A70790066AB93 /* Main.storyboard */; };
+		C1744FDF233A5A15003CCB40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1744FDE233A5A15003CCB40 /* AppDelegate.swift */; };
+		C1744FE7233A5A15003CCB40 /* SmartCalendar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C1744FE5233A5A15003CCB40 /* SmartCalendar.xcdatamodeld */; };
+		C1744FE9233A5A16003CCB40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1744FE8233A5A16003CCB40 /* Assets.xcassets */; };
+		C1744FEC233A5A16003CCB40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1744FEA233A5A16003CCB40 /* LaunchScreen.storyboard */; };
+		C1744FF7233A5A17003CCB40 /* SmartCalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1744FF6233A5A17003CCB40 /* SmartCalendarTests.swift */; };
+		C1F525C3233A6620006360F3 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F525C2233A6620006360F3 /* R.generated.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C1744FF3233A5A17003CCB40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1744FD3233A5A14003CCB40 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1744FDA233A5A14003CCB40;
+			remoteInfo = SmartCalendar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		48FEDE4B4C80BD66293BFBE4 /* Pods_SmartCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		689250BB973FF30D9668D18F /* Pods_SmartCalendarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartCalendarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		699D329FB81F1DE59E603AAF /* Pods-SmartCalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartCalendar.debug.xcconfig"; path = "Target Support Files/Pods-SmartCalendar/Pods-SmartCalendar.debug.xcconfig"; sourceTree = "<group>"; };
+		981778DD9C53B34645F42DD1 /* Pods-SmartCalendarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartCalendarTests.debug.xcconfig"; path = "Target Support Files/Pods-SmartCalendarTests/Pods-SmartCalendarTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A6500D71661136FCEF4FC89B /* Pods-SmartCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartCalendar.release.xcconfig"; path = "Target Support Files/Pods-SmartCalendar/Pods-SmartCalendar.release.xcconfig"; sourceTree = "<group>"; };
+		C11591AB233A70790066AB93 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C1744FDB233A5A15003CCB40 /* SmartCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1744FDE233A5A15003CCB40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C1744FE6233A5A15003CCB40 /* SmartCalendar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SmartCalendar.xcdatamodel; sourceTree = "<group>"; };
+		C1744FE8233A5A16003CCB40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C1744FEB233A5A16003CCB40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C1744FED233A5A16003CCB40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1744FF2233A5A17003CCB40 /* SmartCalendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartCalendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1744FF6233A5A17003CCB40 /* SmartCalendarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartCalendarTests.swift; sourceTree = "<group>"; };
+		C1744FF8233A5A17003CCB40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1F525C2233A6620006360F3 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		F53B36523DB1AB68BCB5D513 /* Pods-SmartCalendarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartCalendarTests.release.xcconfig"; path = "Target Support Files/Pods-SmartCalendarTests/Pods-SmartCalendarTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C1744FD8233A5A14003CCB40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09AC7AAFD9BAA7EF72C1EAAC /* Pods_SmartCalendar.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1744FEF233A5A17003CCB40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3FC8642332EE14E994D633A /* Pods_SmartCalendarTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B6C45595AA53F014E39BFAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48FEDE4B4C80BD66293BFBE4 /* Pods_SmartCalendar.framework */,
+				689250BB973FF30D9668D18F /* Pods_SmartCalendarTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B16C4234AB500E71317E022 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				699D329FB81F1DE59E603AAF /* Pods-SmartCalendar.debug.xcconfig */,
+				A6500D71661136FCEF4FC89B /* Pods-SmartCalendar.release.xcconfig */,
+				981778DD9C53B34645F42DD1 /* Pods-SmartCalendarTests.debug.xcconfig */,
+				F53B36523DB1AB68BCB5D513 /* Pods-SmartCalendarTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C1744FD2233A5A14003CCB40 = {
+			isa = PBXGroup;
+			children = (
+				C1744FDD233A5A15003CCB40 /* SmartCalendar */,
+				C1744FF5233A5A17003CCB40 /* SmartCalendarTests */,
+				C1744FDC233A5A15003CCB40 /* Products */,
+				5B16C4234AB500E71317E022 /* Pods */,
+				0B6C45595AA53F014E39BFAD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C1744FDC233A5A15003CCB40 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1744FDB233A5A15003CCB40 /* SmartCalendar.app */,
+				C1744FF2233A5A17003CCB40 /* SmartCalendarTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C1744FDD233A5A15003CCB40 /* SmartCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				C1745005233A5C94003CCB40 /* Managers */,
+				C1745006233A5CD5003CCB40 /* Extensions */,
+				C1745008233A5DF2003CCB40 /* Networking */,
+				C1745007233A5CE4003CCB40 /* Models */,
+				C1745004233A5C3F003CCB40 /* Scenes */,
+				C1745001233A5BE3003CCB40 /* SupportingFiles */,
+				C1745002233A5C16003CCB40 /* Resources */,
+				C1745003233A5C2E003CCB40 /* Stroryboards */,
+			);
+			path = SmartCalendar;
+			sourceTree = "<group>";
+		};
+		C1744FF5233A5A17003CCB40 /* SmartCalendarTests */ = {
+			isa = PBXGroup;
+			children = (
+				C1744FF6233A5A17003CCB40 /* SmartCalendarTests.swift */,
+				C1744FF8233A5A17003CCB40 /* Info.plist */,
+			);
+			path = SmartCalendarTests;
+			sourceTree = "<group>";
+		};
+		C1745001233A5BE3003CCB40 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C1F525C2233A6620006360F3 /* R.generated.swift */,
+				C1744FDE233A5A15003CCB40 /* AppDelegate.swift */,
+				C1744FED233A5A16003CCB40 /* Info.plist */,
+				C1744FE5233A5A15003CCB40 /* SmartCalendar.xcdatamodeld */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		C1745002233A5C16003CCB40 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C1744FE8233A5A16003CCB40 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C1745003233A5C2E003CCB40 /* Stroryboards */ = {
+			isa = PBXGroup;
+			children = (
+				C11591AB233A70790066AB93 /* Main.storyboard */,
+				C1744FEA233A5A16003CCB40 /* LaunchScreen.storyboard */,
+			);
+			path = Stroryboards;
+			sourceTree = "<group>";
+		};
+		C1745004233A5C3F003CCB40 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		C1745005233A5C94003CCB40 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		C1745006233A5CD5003CCB40 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C1745007233A5CE4003CCB40 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C1745008233A5DF2003CCB40 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C1744FDA233A5A14003CCB40 /* SmartCalendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1744FFB233A5A17003CCB40 /* Build configuration list for PBXNativeTarget "SmartCalendar" */;
+			buildPhases = (
+				22C84D9481B9EC11223A16B7 /* [CP] Check Pods Manifest.lock */,
+				C1F525C1233A64BD006360F3 /* Run Script R.swift */,
+				C1744FD7233A5A14003CCB40 /* Sources */,
+				C1744FD8233A5A14003CCB40 /* Frameworks */,
+				C1744FD9233A5A14003CCB40 /* Resources */,
+				A42705CBF82D32113FED5E7C /* [CP] Embed Pods Frameworks */,
+				C11591AD233A74550066AB93 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmartCalendar;
+			productName = SmartCalendar;
+			productReference = C1744FDB233A5A15003CCB40 /* SmartCalendar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C1744FF1233A5A17003CCB40 /* SmartCalendarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1744FFE233A5A17003CCB40 /* Build configuration list for PBXNativeTarget "SmartCalendarTests" */;
+			buildPhases = (
+				6E3704B27232C88C60955BD5 /* [CP] Check Pods Manifest.lock */,
+				C1744FEE233A5A17003CCB40 /* Sources */,
+				C1744FEF233A5A17003CCB40 /* Frameworks */,
+				C1744FF0233A5A17003CCB40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1744FF4233A5A17003CCB40 /* PBXTargetDependency */,
+			);
+			name = SmartCalendarTests;
+			productName = SmartCalendarTests;
+			productReference = C1744FF2233A5A17003CCB40 /* SmartCalendarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C1744FD3233A5A14003CCB40 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = OldSchool;
+				TargetAttributes = {
+					C1744FDA233A5A14003CCB40 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					C1744FF1233A5A17003CCB40 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = C1744FDA233A5A14003CCB40;
+					};
+				};
+			};
+			buildConfigurationList = C1744FD6233A5A14003CCB40 /* Build configuration list for PBXProject "SmartCalendar" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C1744FD2233A5A14003CCB40;
+			productRefGroup = C1744FDC233A5A15003CCB40 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C1744FDA233A5A14003CCB40 /* SmartCalendar */,
+				C1744FF1233A5A17003CCB40 /* SmartCalendarTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C1744FD9233A5A14003CCB40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C11591AC233A70790066AB93 /* Main.storyboard in Resources */,
+				C1744FEC233A5A16003CCB40 /* LaunchScreen.storyboard in Resources */,
+				C1744FE9233A5A16003CCB40 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1744FF0233A5A17003CCB40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22C84D9481B9EC11223A16B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartCalendar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E3704B27232C88C60955BD5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartCalendarTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A42705CBF82D32113FED5E7C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartCalendar/Pods-SmartCalendar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartCalendar/Pods-SmartCalendar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmartCalendar/Pods-SmartCalendar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C11591AD233A74550066AB93 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		C1F525C1233A64BD006360F3 /* Run Script R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = "Run Script R.swift";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/SmartCalendar/SupportingFiles/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/SmartCalendar/SupportingFiles/R.generated.swift\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C1744FD7233A5A14003CCB40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1744FE7233A5A15003CCB40 /* SmartCalendar.xcdatamodeld in Sources */,
+				C1744FDF233A5A15003CCB40 /* AppDelegate.swift in Sources */,
+				C1F525C3233A6620006360F3 /* R.generated.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1744FEE233A5A17003CCB40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1744FF7233A5A17003CCB40 /* SmartCalendarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C1744FF4233A5A17003CCB40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1744FDA233A5A14003CCB40 /* SmartCalendar */;
+			targetProxy = C1744FF3233A5A17003CCB40 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C1744FEA233A5A16003CCB40 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1744FEB233A5A16003CCB40 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C1744FF9233A5A17003CCB40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C1744FFA233A5A17003CCB40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C1744FFC233A5A17003CCB40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 699D329FB81F1DE59E603AAF /* Pods-SmartCalendar.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/SmartCalendar/SupportingFiles/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.oldschool.SmartCalendar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C1744FFD233A5A17003CCB40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6500D71661136FCEF4FC89B /* Pods-SmartCalendar.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/SmartCalendar/SupportingFiles/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.oldschool.SmartCalendar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		C1744FFF233A5A17003CCB40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 981778DD9C53B34645F42DD1 /* Pods-SmartCalendarTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SmartCalendarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.oldschool.SmartCalendarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartCalendar.app/SmartCalendar";
+			};
+			name = Debug;
+		};
+		C1745000233A5A17003CCB40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F53B36523DB1AB68BCB5D513 /* Pods-SmartCalendarTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SmartCalendarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.oldschool.SmartCalendarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartCalendar.app/SmartCalendar";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C1744FD6233A5A14003CCB40 /* Build configuration list for PBXProject "SmartCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1744FF9233A5A17003CCB40 /* Debug */,
+				C1744FFA233A5A17003CCB40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1744FFB233A5A17003CCB40 /* Build configuration list for PBXNativeTarget "SmartCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1744FFC233A5A17003CCB40 /* Debug */,
+				C1744FFD233A5A17003CCB40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1744FFE233A5A17003CCB40 /* Build configuration list for PBXNativeTarget "SmartCalendarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1744FFF233A5A17003CCB40 /* Debug */,
+				C1745000233A5A17003CCB40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C1744FE5233A5A15003CCB40 /* SmartCalendar.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C1744FE6233A5A15003CCB40 /* SmartCalendar.xcdatamodel */,
+			);
+			currentVersion = C1744FE6233A5A15003CCB40 /* SmartCalendar.xcdatamodel */;
+			path = SmartCalendar.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C1744FD3233A5A14003CCB40 /* Project object */;
+}
