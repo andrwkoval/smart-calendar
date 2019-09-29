@@ -6,12 +6,16 @@ target 'SmartCalendar' do
   use_frameworks!
 
   # Pods for SmartCalendar
-    pod 'R.swift'
-    pod 'Alamofire'
-    pod 'SwiftLint'
+	pod 'R.swift'
+   	pod 'Alamofire'
+	pod 'SwiftLint'
 
   target 'SmartCalendarTests' do
     inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'SmartCalendarUITests' do
     # Pods for testing
   end
 

@@ -2,8 +2,8 @@
 //  SmartCalendarTests.swift
 //  SmartCalendarTests
 //
-//  Created by Yevhenii Orenchuk on 9/24/19.
-//  Copyright © 2019 OldSchool. All rights reserved.
+//  Created by Yevhenii Orenchuk on 9/29/19.
+//  Copyright © 2019 oldschool-ucu-ios. All rights reserved.
 //
 
 import XCTest

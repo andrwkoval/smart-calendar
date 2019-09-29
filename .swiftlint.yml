@@ -1,3 +1,5 @@
-excluded: 
-  - Pods
-  - SmartCalendar/SupportingFiles
+disabled_rules: # rule identifiers to exclude from running
+    - line_length
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+    - Pods
+    - SmartCalendar/SupportingFiles
