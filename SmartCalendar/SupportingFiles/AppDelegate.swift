@@ -8,14 +8,16 @@
 
 import UIKit
 import CoreData
+import GoogleSignIn
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        GIDSignIn.sharedInstance().clientID = "54251599891-pvi21hv87iiqkev1deuaq6v4b792ma7c.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().delegate = self
+        
         return true
     }
 
@@ -31,6 +33,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+    
+    @available(iOS 9.0, *)
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
+      return GIDSignIn.sharedInstance().handle(url)
     }
 
     // MARK: - Core Data stack
@@ -76,6 +83,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+    
+    // MARK: - GoogleSignIn delegate
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+          if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
+            print("The user has not signed in before or they have since signed out.")
+          } else {
+            print("\(error.localizedDescription)")
+          }
+          return
+        }
+        
+        // TODO: - User lives here, save his data
+        
+        print(user.profile.name ?? "null")
+        
     }
 
 }

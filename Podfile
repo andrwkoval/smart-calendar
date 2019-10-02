@@ -7,8 +7,9 @@ target 'SmartCalendar' do
 
   # Pods for SmartCalendar
 	pod 'R.swift'
-   	pod 'Alamofire'
 	pod 'SwiftLint'
+	pod 'GoogleAPIClientForREST/Calendar'
+	pod 'GoogleSignIn'
 
   target 'SmartCalendarTests' do
     inherit! :search_paths

@@ -21,6 +21,7 @@
 		C19E5138234106DF00086B88 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C19E5135234106DF00086B88 /* .gitignore */; };
 		C19E5139234106DF00086B88 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C19E5136234106DF00086B88 /* .swiftlint.yml */; };
 		C19E513A234106DF00086B88 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C19E5137234106DF00086B88 /* README.md */; };
+		C1D4EA8623453FA8009E8694 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D4EA8523453FA8009E8694 /* SignInVC.swift */; };
 		C1D656182341056600FA9BD7 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D656172341056600FA9BD7 /* R.generated.swift */; };
 		DF5DD4B99DAD8CF5CFD0AB8D /* Pods_SmartCalendar_SmartCalendarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AD02499C75C702B872A914 /* Pods_SmartCalendar_SmartCalendarUITests.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		C19E5135234106DF00086B88 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		C19E5136234106DF00086B88 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C19E5137234106DF00086B88 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C1D4EA8523453FA8009E8694 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		C1D656172341056600FA9BD7 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		CD80E17CB5A2E83C6C37F86E /* Pods-SmartCalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartCalendar.debug.xcconfig"; path = "Target Support Files/Pods-SmartCalendar/Pods-SmartCalendar.debug.xcconfig"; sourceTree = "<group>"; };
 		DFE29D5775A34B4E82DB2716 /* Pods-SmartCalendar-SmartCalendarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartCalendar-SmartCalendarUITests.debug.xcconfig"; path = "Target Support Files/Pods-SmartCalendar-SmartCalendarUITests/Pods-SmartCalendar-SmartCalendarUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -218,9 +220,18 @@
 		C11516202341001D00A00399 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				C1D4EA8423453F82009E8694 /* SignInVC */,
 				C115161F2341000000A00399 /* BaseVC */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		C1D4EA8423453F82009E8694 /* SignInVC */ = {
+			isa = PBXGroup;
+			children = (
+				C1D4EA8523453FA8009E8694 /* SignInVC.swift */,
+			);
+			path = SignInVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +248,7 @@
 				C11515E42340FA0200A00399 /* Resources */,
 				DCC77E91AA7074524B2DA507 /* [CP] Embed Pods Frameworks */,
 				C19E51342341061000086B88 /* Run Script SwiftLint */,
+				04B5ADEF0AF1792C20D9186E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -275,6 +287,7 @@
 				C11516072340FA0400A00399 /* Frameworks */,
 				C11516082340FA0400A00399 /* Resources */,
 				7DE79229B06B30A988F0600D /* [CP] Embed Pods Frameworks */,
+				F2212417EAE64CFF6D953BED /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -360,6 +373,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		04B5ADEF0AF1792C20D9186E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartCalendar/Pods-SmartCalendar-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartCalendar/Pods-SmartCalendar-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmartCalendar/Pods-SmartCalendar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1EC3E9A5F0FA40B599339B1E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -476,6 +506,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmartCalendar/Pods-SmartCalendar-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F2212417EAE64CFF6D953BED /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartCalendar-SmartCalendarUITests/Pods-SmartCalendar-SmartCalendarUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartCalendar-SmartCalendarUITests/Pods-SmartCalendar-SmartCalendarUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmartCalendar-SmartCalendarUITests/Pods-SmartCalendar-SmartCalendarUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FE14E9E8586FE04E34B00895 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -507,6 +554,7 @@
 			files = (
 				C11515EE2340FA0200A00399 /* BaseVC.swift in Sources */,
 				C11515EA2340FA0200A00399 /* AppDelegate.swift in Sources */,
+				C1D4EA8623453FA8009E8694 /* SignInVC.swift in Sources */,
 				C1D656182341056600FA9BD7 /* R.generated.swift in Sources */,
 				C11515EC2340FA0200A00399 /* SceneDelegate.swift in Sources */,
 				C11515F42340FA0200A00399 /* SmartCalendar.xcdatamodeld in Sources */,
@@ -691,7 +739,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.oldschool.SmartCalendar;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oldschool.smart-calendar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -712,7 +760,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.oldschool.SmartCalendar;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oldschool.smart-calendar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
