@@ -18,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().clientID = "54251599891-pvi21hv87iiqkev1deuaq6v4b792ma7c.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
         
+        // Automatically sign in the user.
+        GIDSignIn.sharedInstance()?.restorePreviousSignIn()
+        
         return true
     }
 
@@ -99,7 +102,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         // TODO: - User lives here, save his data
         
-        print(user.profile.name ?? "null")
+        let username = user.profile.name ?? "null"
+        
+        UserDefaults.standard.set(username, forKey: "user")
+        
+        RootCoordinator.shared.switch(to: .main)
         
     }
 

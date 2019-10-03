@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZqX-lS-fkg">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign InVC-->
+        <scene sceneID="hPn-Zz-teC">
+            <objects>
+                <viewController storyboardIdentifier="SignInVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZqX-lS-fkg" customClass="SignInVC" customModule="SmartCalendar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gBI-UR-soA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYD-0u-LQ2" customClass="GIDSignInButton">
+                                <rect key="frame" x="50" y="437.33333333333331" width="275" height="50"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Ztb-q0-FBO"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Для роботи з додатком необхідно авторизуватися" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHL-Hb-5nN">
+                                <rect key="frame" x="50" y="244.00000000000003" width="275" height="93.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iOZ-cM-DjN" firstAttribute="trailing" secondItem="bHL-Hb-5nN" secondAttribute="trailing" constant="50" id="5UA-nP-w2o"/>
+                            <constraint firstItem="bHL-Hb-5nN" firstAttribute="top" secondItem="iOZ-cM-DjN" secondAttribute="top" constant="200" id="Dz6-Hx-tcc"/>
+                            <constraint firstItem="iOZ-cM-DjN" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ZYD-0u-LQ2" secondAttribute="bottom" constant="50" id="KR1-9n-oi6"/>
+                            <constraint firstItem="iOZ-cM-DjN" firstAttribute="trailing" secondItem="ZYD-0u-LQ2" secondAttribute="trailing" constant="50" id="MJz-g4-t0G"/>
+                            <constraint firstItem="bHL-Hb-5nN" firstAttribute="leading" secondItem="iOZ-cM-DjN" secondAttribute="leading" constant="50" id="YGe-bH-Ibj"/>
+                            <constraint firstItem="ZYD-0u-LQ2" firstAttribute="top" secondItem="bHL-Hb-5nN" secondAttribute="bottom" constant="100" id="fsE-Aa-k9m"/>
+                            <constraint firstItem="ZYD-0u-LQ2" firstAttribute="leading" secondItem="iOZ-cM-DjN" secondAttribute="leading" constant="50" id="y7n-Rk-39s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iOZ-cM-DjN"/>
+                    </view>
+                    <connections>
+                        <outlet property="signInButton" destination="ZYD-0u-LQ2" id="HO7-ai-nbd"/>
+                        <outlet property="titleLabel" destination="bHL-Hb-5nN" id="Joh-aj-F30"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xPe-iH-ZPP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-14" y="66"/>
+        </scene>
+    </scenes>
+</document>

@@ -7,32 +7,31 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sign InVC-->
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SignInVC" customModule="SmartCalendar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="SmartCalendar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NOw-b4-Lvu" customClass="GIDSignInButton">
-                                <rect key="frame" x="107" y="428" width="200" height="50"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="KIh-na-eJh"/>
-                                    <constraint firstAttribute="width" constant="200" id="gXA-mj-CxZ"/>
-                                </constraints>
-                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIJ-6r-azH">
+                                <rect key="frame" x="50" y="144" width="314" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="NOw-b4-Lvu" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="I9s-Z2-v5p"/>
-                            <constraint firstItem="NOw-b4-Lvu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aCL-FK-LTu"/>
+                            <constraint firstItem="jIJ-6r-azH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="K79-R9-456"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jIJ-6r-azH" secondAttribute="trailing" constant="50" id="Tjp-8Z-OfM"/>
+                            <constraint firstItem="jIJ-6r-azH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Xgg-2S-eZx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="signInButton" destination="NOw-b4-Lvu" id="XbW-jS-chZ"/>
+                        <outlet property="titleLabel" destination="jIJ-6r-azH" id="Jw0-3a-pY1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

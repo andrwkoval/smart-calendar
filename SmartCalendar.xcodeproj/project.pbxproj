@@ -21,7 +21,10 @@
 		C19E5138234106DF00086B88 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C19E5135234106DF00086B88 /* .gitignore */; };
 		C19E5139234106DF00086B88 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C19E5136234106DF00086B88 /* .swiftlint.yml */; };
 		C19E513A234106DF00086B88 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C19E5137234106DF00086B88 /* README.md */; };
+		C1B2F8232345E941002B6776 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2F8222345E941002B6776 /* MainVC.swift */; };
+		C1B2F8262345EA27002B6776 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2F8252345EA27002B6776 /* RootCoordinator.swift */; };
 		C1D4EA8623453FA8009E8694 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D4EA8523453FA8009E8694 /* SignInVC.swift */; };
+		C1D4EA882345E349009E8694 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1D4EA872345E349009E8694 /* Root.storyboard */; };
 		C1D656182341056600FA9BD7 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D656172341056600FA9BD7 /* R.generated.swift */; };
 		DF5DD4B99DAD8CF5CFD0AB8D /* Pods_SmartCalendar_SmartCalendarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AD02499C75C702B872A914 /* Pods_SmartCalendar_SmartCalendarUITests.framework */; };
 /* End PBXBuildFile section */
@@ -68,7 +71,10 @@
 		C19E5135234106DF00086B88 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		C19E5136234106DF00086B88 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C19E5137234106DF00086B88 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C1B2F8222345E941002B6776 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		C1B2F8252345EA27002B6776 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		C1D4EA8523453FA8009E8694 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		C1D4EA872345E349009E8694 /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
 		C1D656172341056600FA9BD7 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		CD80E17CB5A2E83C6C37F86E /* Pods-SmartCalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartCalendar.debug.xcconfig"; path = "Target Support Files/Pods-SmartCalendar/Pods-SmartCalendar.debug.xcconfig"; sourceTree = "<group>"; };
 		DFE29D5775A34B4E82DB2716 /* Pods-SmartCalendar-SmartCalendarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartCalendar-SmartCalendarUITests.debug.xcconfig"; path = "Target Support Files/Pods-SmartCalendar-SmartCalendarUITests/Pods-SmartCalendar-SmartCalendarUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +160,7 @@
 		C11515E82340FA0200A00399 /* SmartCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				C1B2F8242345EA13002B6776 /* Coordinators */,
 				C11516202341001D00A00399 /* Scenes */,
 				C115161D2340FC9400A00399 /* Storyboards */,
 				C115161E2340FFC200A00399 /* SupportingFiles */,
@@ -191,8 +198,9 @@
 		C115161D2340FC9400A00399 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				C11515EF2340FA0200A00399 /* Main.storyboard */,
 				C11515F72340FA0400A00399 /* LaunchScreen.storyboard */,
+				C11515EF2340FA0200A00399 /* Main.storyboard */,
+				C1D4EA872345E349009E8694 /* Root.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -209,29 +217,46 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		C115161F2341000000A00399 /* BaseVC */ = {
+		C115161F2341000000A00399 /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				C11515ED2340FA0200A00399 /* BaseVC.swift */,
 			);
-			path = BaseVC;
+			path = Base;
 			sourceTree = "<group>";
 		};
 		C11516202341001D00A00399 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				C1D4EA8423453F82009E8694 /* SignInVC */,
-				C115161F2341000000A00399 /* BaseVC */,
+				C115161F2341000000A00399 /* Base */,
+				C1D4EA8423453F82009E8694 /* SignIn */,
+				C1B2F8212345E913002B6776 /* Main */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		C1D4EA8423453F82009E8694 /* SignInVC */ = {
+		C1B2F8212345E913002B6776 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C1B2F8222345E941002B6776 /* MainVC.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C1B2F8242345EA13002B6776 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				C1B2F8252345EA27002B6776 /* RootCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		C1D4EA8423453F82009E8694 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
 				C1D4EA8523453FA8009E8694 /* SignInVC.swift */,
 			);
-			path = SignInVC;
+			path = SignIn;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,6 +376,7 @@
 				C19E5139234106DF00086B88 /* .swiftlint.yml in Resources */,
 				C19E5138234106DF00086B88 /* .gitignore in Resources */,
 				C11515F92340FA0400A00399 /* LaunchScreen.storyboard in Resources */,
+				C1D4EA882345E349009E8694 /* Root.storyboard in Resources */,
 				C11515F62340FA0400A00399 /* Assets.xcassets in Resources */,
 				C11515F12340FA0200A00399 /* Main.storyboard in Resources */,
 			);
@@ -552,12 +578,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1B2F8262345EA27002B6776 /* RootCoordinator.swift in Sources */,
 				C11515EE2340FA0200A00399 /* BaseVC.swift in Sources */,
 				C11515EA2340FA0200A00399 /* AppDelegate.swift in Sources */,
 				C1D4EA8623453FA8009E8694 /* SignInVC.swift in Sources */,
 				C1D656182341056600FA9BD7 /* R.generated.swift in Sources */,
 				C11515EC2340FA0200A00399 /* SceneDelegate.swift in Sources */,
 				C11515F42340FA0200A00399 /* SmartCalendar.xcdatamodeld in Sources */,
+				C1B2F8232345E941002B6776 /* MainVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

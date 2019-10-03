@@ -14,6 +14,7 @@ final class SignInVC: UIViewController {
     // MARK: - IBOutlets
 
     @IBOutlet private weak var signInButton: GIDSignInButton!
+    @IBOutlet private weak var titleLabel: UILabel!
 
     // MARK: - ViewController Lifecycle
 
@@ -21,9 +22,6 @@ final class SignInVC: UIViewController {
         super.viewDidLoad()
 
         GIDSignIn.sharedInstance()?.presentingViewController = self
-
-        // Automatically sign in the user.
-        GIDSignIn.sharedInstance()?.restorePreviousSignIn()
 
     }
 
