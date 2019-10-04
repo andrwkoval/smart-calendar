@@ -23,6 +23,7 @@
 		C19E513A234106DF00086B88 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C19E5137234106DF00086B88 /* README.md */; };
 		C1B2F8232345E941002B6776 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2F8222345E941002B6776 /* MainVC.swift */; };
 		C1B2F8262345EA27002B6776 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2F8252345EA27002B6776 /* RootCoordinator.swift */; };
+		C1B2F8292347499D002B6776 /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2F8282347499D002B6776 /* CalendarService.swift */; };
 		C1D4EA8623453FA8009E8694 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D4EA8523453FA8009E8694 /* SignInVC.swift */; };
 		C1D4EA882345E349009E8694 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1D4EA872345E349009E8694 /* Root.storyboard */; };
 		C1D656182341056600FA9BD7 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D656172341056600FA9BD7 /* R.generated.swift */; };
@@ -73,6 +74,7 @@
 		C19E5137234106DF00086B88 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C1B2F8222345E941002B6776 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		C1B2F8252345EA27002B6776 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		C1B2F8282347499D002B6776 /* CalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; };
 		C1D4EA8523453FA8009E8694 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		C1D4EA872345E349009E8694 /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
 		C1D656172341056600FA9BD7 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				C1B2F8242345EA13002B6776 /* Coordinators */,
+				C1B2F8272347497F002B6776 /* Networking */,
 				C11516202341001D00A00399 /* Scenes */,
 				C115161D2340FC9400A00399 /* Storyboards */,
 				C115161E2340FFC200A00399 /* SupportingFiles */,
@@ -249,6 +252,14 @@
 				C1B2F8252345EA27002B6776 /* RootCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		C1B2F8272347497F002B6776 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C1B2F8282347499D002B6776 /* CalendarService.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		C1D4EA8423453F82009E8694 /* SignIn */ = {
@@ -582,6 +593,7 @@
 				C11515EE2340FA0200A00399 /* BaseVC.swift in Sources */,
 				C11515EA2340FA0200A00399 /* AppDelegate.swift in Sources */,
 				C1D4EA8623453FA8009E8694 /* SignInVC.swift in Sources */,
+				C1B2F8292347499D002B6776 /* CalendarService.swift in Sources */,
 				C1D656182341056600FA9BD7 /* R.generated.swift in Sources */,
 				C11515EC2340FA0200A00399 /* SceneDelegate.swift in Sources */,
 				C11515F42340FA0200A00399 /* SmartCalendar.xcdatamodeld in Sources */,

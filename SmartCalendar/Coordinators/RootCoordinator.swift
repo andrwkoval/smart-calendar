@@ -29,9 +29,11 @@ final class RootCoordinator {
         case .main:
             let mainVC = R.storyboard.main().instantiateInitialViewController() as? MainVC
             window.rootViewController = mainVC
-        default:
-            break
+        case .auth:
+            let signInVC = R.storyboard.root().instantiateInitialViewController() as? SignInVC
+            window.rootViewController = signInVC
         }
         
+        window.makeKeyAndVisible()
     }
 }

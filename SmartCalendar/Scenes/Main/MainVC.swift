@@ -29,7 +29,14 @@ final class MainVC: BaseVC {
         let username = UserDefaults.standard.string(forKey: "user")
 
         self.titleText = username
+        
+        CalendarService.shared.getCalendarList()
 
     }
 
+    @IBAction func signOutButton(_ sender: UIButton) {
+        GIDSignIn.sharedInstance().signOut()
+        
+        RootCoordinator.shared.switch(to: .auth)
+    }
 }

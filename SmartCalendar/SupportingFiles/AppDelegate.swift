@@ -11,15 +11,9 @@ import CoreData
 import GoogleSignIn
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        GIDSignIn.sharedInstance().clientID = "54251599891-pvi21hv87iiqkev1deuaq6v4b792ma7c.apps.googleusercontent.com"
-        GIDSignIn.sharedInstance().delegate = self
-        
-        // Automatically sign in the user.
-        GIDSignIn.sharedInstance()?.restorePreviousSignIn()
         
         return true
     }
@@ -86,28 +80,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
-    }
-    
-    // MARK: - GoogleSignIn delegate
-    
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        if let error = error {
-          if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
-            print("The user has not signed in before or they have since signed out.")
-          } else {
-            print("\(error.localizedDescription)")
-          }
-          return
-        }
-        
-        // TODO: - User lives here, save his data
-        
-        let username = user.profile.name ?? "null"
-        
-        UserDefaults.standard.set(username, forKey: "user")
-        
-        RootCoordinator.shared.switch(to: .main)
-        
     }
 
 }

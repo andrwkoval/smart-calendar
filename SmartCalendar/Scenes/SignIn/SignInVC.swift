@@ -21,8 +21,35 @@ final class SignInVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        GIDSignIn.sharedInstance()?.presentingViewController = self
+        GIDSignIn.sharedInstance().presentingViewController = self
+        GIDSignIn.sharedInstance().delegate = self
 
     }
 
+}
+
+    // MARK: - GoogleSignIn delegate
+
+extension SignInVC: GIDSignInDelegate {
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+          if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
+            print("The user has not signed in before or they have since signed out.")
+          } else {
+            print("\(error.localizedDescription)")
+          }
+          return
+        }
+        
+        // TODO: - User lives here, save his data
+        
+        let username = user.profile.name ?? "null"
+        
+        UserDefaults.standard.set(username, forKey: "user")
+        
+        RootCoordinator.shared.switch(to: .main)
+        
+    }
+    
 }
