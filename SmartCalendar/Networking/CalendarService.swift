@@ -37,6 +37,8 @@ final class CalendarService {
         return calendarService
     }()
     
+    // MARK: - Public Methods
+    
     func getCalendarList() {
         let query = GTLRCalendarQuery_CalendarListList.query()
         self.service?.executeQuery(query, completionHandler: { (ticket, result, error) in
