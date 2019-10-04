@@ -30,8 +30,10 @@ final class MainVC: BaseVC {
 
         self.titleText = username
         
-        CalendarService.shared.getCalendarList()
-
+        CalendarService.shared.getCalendarList() { (_,_) in }
+        
+        CalendarService.shared.getEvents(id: "victor.klioba@gmail.com") { (_,_) in }
+        
     }
 
     @IBAction func signOutButton(_ sender: UIButton) {

@@ -39,7 +39,7 @@ final class CalendarService {
     
     // MARK: - Public Methods
     
-    func getCalendarList() {
+    func getCalendarList(completion: @escaping ([GTLRCalendar_CalendarListEntry]?, Error?) -> Void) {
         let query = GTLRCalendarQuery_CalendarListList.query()
         self.service?.executeQuery(query, completionHandler: { (ticket, result, error) in
             print("ticket: \(ticket)")
@@ -47,8 +47,40 @@ final class CalendarService {
                 items.forEach {
                     print("item: \($0)")
                 }
+                
+                completion(items, nil)
+            } else {
+                print("error: \(error.debugDescription)")
+                completion(nil, error)
             }
-            print("error: \(error.debugDescription)")
+        })
+    }
+    
+    func getEvents(id calendarId: String,
+                   startDate: Date = Date(),
+                   endDate: Date = Date().addingTimeInterval(60*60*24),
+                   completion: @escaping ([GTLRCalendar_Event]?, Error?) -> Void) {
+        
+        // You can pass start and end dates with function parameters
+        let startDateTime = GTLRDateTime(date: Calendar.current.startOfDay(for: startDate))
+        let endDateTime = GTLRDateTime(date: endDate)
+        
+        let query = GTLRCalendarQuery_EventsList.query(withCalendarId: calendarId)
+        query.timeMin = startDateTime
+        query.timeMax = endDateTime
+        
+        self.service?.executeQuery(query, completionHandler: { (ticket, result, error) in
+            print("ticket: \(ticket)")
+            if let events = result as? GTLRCalendar_Events, let items = events.items {
+                items.forEach {
+                    print("event: \($0)")
+                }
+                
+                completion(items, nil)
+            } else {
+                print("error: \(error.debugDescription)")
+                completion(nil, error)
+            }
         })
     }
 }
