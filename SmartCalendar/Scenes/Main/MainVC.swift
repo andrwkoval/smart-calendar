@@ -30,9 +30,13 @@ final class MainVC: BaseVC {
 
         self.titleText = username
         
-        CalendarService.shared.getCalendarList() { (_,_) in }
-        
-        CalendarService.shared.getEvents(id: "victor.klioba@gmail.com") { (_,_) in }
+        CalendarService.shared.getEvents(id: "orenchuky@ucu.edu.ua") { (result, error) in
+            result?.forEach {
+                print("\($0.start) - \($0.end)")
+            }
+            
+            print(error?.localizedDescription)
+        }
         
     }
 
