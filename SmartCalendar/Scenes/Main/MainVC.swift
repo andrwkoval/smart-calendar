@@ -30,8 +30,14 @@ final class MainVC: BaseVC {
 
         self.titleText = username
         
-        CalendarService.shared.getCalendarList()
-
+        CalendarService.shared.getEvents(id: "orenchuky@ucu.edu.ua") { (result, error) in
+            result?.forEach {
+                print("\($0.start) - \($0.end)")
+            }
+            
+            print(error?.localizedDescription)
+        }
+        
     }
 
     @IBAction func signOutButton(_ sender: UIButton) {
