@@ -42,11 +42,9 @@ extension SignInVC: GIDSignInDelegate {
           return
         }
         
-        // TODO: - User lives here, save his data
-        
-        let username = user.profile.name ?? "null"
-        
-        UserDefaults.standard.set(username, forKey: "user")
+        if let email = user.profile.email {
+            UserDataManager.shared.save(email: email)
+        }
         
         RootCoordinator.shared.switch(to: .main)
         

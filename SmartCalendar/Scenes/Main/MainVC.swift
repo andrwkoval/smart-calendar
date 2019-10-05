@@ -26,9 +26,9 @@ final class MainVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let username = UserDefaults.standard.string(forKey: "user")
+        let email = UserDataManager.shared.getEmail()
 
-        self.titleText = username
+        self.titleText = email
         
         CalendarService.shared.getEvents(id: "orenchuky@ucu.edu.ua") { (result, error) in
             result?.forEach {

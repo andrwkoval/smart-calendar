@@ -12,27 +12,21 @@ import GoogleSignIn
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+//    var delegates: [UIWindowSceneDelegate] = [FrameworkService()]
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
         
         GIDSignIn.sharedInstance().clientID = "54251599891-pvi21hv87iiqkev1deuaq6v4b792ma7c.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().scopes = ["https://www.googleapis.com/auth/calendar.readonly"]
-        
+
         if GIDSignIn.sharedInstance().hasPreviousSignIn() {
-            // Automatically sign in the user.
             GIDSignIn.sharedInstance().restorePreviousSignIn()
-            
             RootCoordinator.shared.switch(to: .main, window: self.window)
         } else {
             RootCoordinator.shared.switch(to: .auth, window: self.window)
         }
-        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -10,6 +10,7 @@ target 'SmartCalendar' do
 	pod 'SwiftLint'
 	pod 'GoogleAPIClientForREST/Calendar'
 	pod 'GoogleSignIn'
+  pod 'Locksmith'
 
   target 'SmartCalendarTests' do
     inherit! :search_paths
