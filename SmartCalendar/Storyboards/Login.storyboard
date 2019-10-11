@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="Ytr-el-ofo">
+            <objects>
+                <viewController id="WGB-kf-pPb" customClass="MainVC" customModule="SmartCalendar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W8X-zv-VRG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXU-xd-TYt">
+                                <rect key="frame" x="150" y="150" width="114" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFw-NV-Xgv">
+                                <rect key="frame" x="165" y="671" width="99" height="41"/>
+                                <state key="normal" title="SignOut"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="AUp-Cf-XSI" firstAttribute="trailing" secondItem="AFw-NV-Xgv" secondAttribute="trailing" constant="150" id="D5X-Hq-CFv"/>
+                            <constraint firstItem="AXU-xd-TYt" firstAttribute="top" secondItem="W8X-zv-VRG" secondAttribute="top" constant="150" id="Rrt-G6-nyJ"/>
+                            <constraint firstItem="AXU-xd-TYt" firstAttribute="leading" secondItem="AUp-Cf-XSI" secondAttribute="leading" constant="150" id="afC-LX-bEQ"/>
+                            <constraint firstItem="AUp-Cf-XSI" firstAttribute="bottom" secondItem="AFw-NV-Xgv" secondAttribute="bottom" constant="150" id="b3T-2H-SNu"/>
+                            <constraint firstItem="AFw-NV-Xgv" firstAttribute="leading" secondItem="AUp-Cf-XSI" secondAttribute="leading" constant="165" id="iqa-ts-L7N"/>
+                            <constraint firstItem="AUp-Cf-XSI" firstAttribute="trailing" secondItem="AXU-xd-TYt" secondAttribute="trailing" constant="150" id="p4H-BO-wUa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AUp-Cf-XSI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nnd-zc-gAZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118.84057971014494" y="125.89285714285714"/>
+        </scene>
+    </scenes>
+</document>

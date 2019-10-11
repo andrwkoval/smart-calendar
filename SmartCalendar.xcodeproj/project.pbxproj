@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		33EF202027DEE4AF90DB9FA6 /* Pods_SmartCalendarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C523600B46FE0F12FD1238 /* Pods_SmartCalendarTests.framework */; };
 		4580EA9295F4B9A639796B7C /* Pods_SmartCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC54034EDCD4673301D93CD /* Pods_SmartCalendar.framework */; };
+		74ADD05123511B44007E369F /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74ADD05023511B44007E369F /* Login.storyboard */; };
 		953727AF234F2DEA00153A2F /* UserSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953727AE234F2DEA00153A2F /* UserSearch.storyboard */; };
 		953727B2234F326200153A2F /* SearchUsersCalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953727B1234F326200153A2F /* SearchUsersCalendarVC.swift */; };
 		95D68E3D2347F3AC00C0A41D /* FindIntersection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D68E3C2347F3AC00C0A41D /* FindIntersection.swift */; };
 		C11515EA2340FA0200A00399 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11515E92340FA0200A00399 /* AppDelegate.swift */; };
 		C11515EC2340FA0200A00399 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11515EB2340FA0200A00399 /* SceneDelegate.swift */; };
 		C11515EE2340FA0200A00399 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11515ED2340FA0200A00399 /* BaseVC.swift */; };
-		C11515F12340FA0200A00399 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C11515EF2340FA0200A00399 /* Main.storyboard */; };
 		C11515F42340FA0200A00399 /* SmartCalendar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C11515F22340FA0200A00399 /* SmartCalendar.xcdatamodeld */; };
 		C11515F62340FA0400A00399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C11515F52340FA0400A00399 /* Assets.xcassets */; };
 		C11515F92340FA0400A00399 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C11515F72340FA0400A00399 /* LaunchScreen.storyboard */; };
@@ -54,6 +54,7 @@
 		03F90F490F2945D622C16C5A /* Pods-SmartCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartCalendar.release.xcconfig"; path = "Target Support Files/Pods-SmartCalendar/Pods-SmartCalendar.release.xcconfig"; sourceTree = "<group>"; };
 		05AD02499C75C702B872A914 /* Pods_SmartCalendar_SmartCalendarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartCalendar_SmartCalendarUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC54034EDCD4673301D93CD /* Pods_SmartCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74ADD05023511B44007E369F /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		83C523600B46FE0F12FD1238 /* Pods_SmartCalendarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartCalendarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		953727AE234F2DEA00153A2F /* UserSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserSearch.storyboard; sourceTree = "<group>"; };
 		953727B1234F326200153A2F /* SearchUsersCalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsersCalendarVC.swift; sourceTree = "<group>"; };
@@ -64,7 +65,6 @@
 		C11515E92340FA0200A00399 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C11515EB2340FA0200A00399 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C11515ED2340FA0200A00399 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
-		C11515F02340FA0200A00399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C11515F32340FA0200A00399 /* SmartCalendar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SmartCalendar.xcdatamodel; sourceTree = "<group>"; };
 		C11515F52340FA0400A00399 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C11515F82340FA0400A00399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -225,9 +225,9 @@
 			isa = PBXGroup;
 			children = (
 				C11515F72340FA0400A00399 /* LaunchScreen.storyboard */,
-				C11515EF2340FA0200A00399 /* Main.storyboard */,
 				C1D4EA872345E349009E8694 /* Root.storyboard */,
 				953727AE234F2DEA00153A2F /* UserSearch.storyboard */,
+				74ADD05023511B44007E369F /* Login.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -415,7 +415,7 @@
 				C11515F92340FA0400A00399 /* LaunchScreen.storyboard in Resources */,
 				C1D4EA882345E349009E8694 /* Root.storyboard in Resources */,
 				C11515F62340FA0400A00399 /* Assets.xcassets in Resources */,
-				C11515F12340FA0200A00399 /* Main.storyboard in Resources */,
+				74ADD05123511B44007E369F /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,14 +661,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C11515EF2340FA0200A00399 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C11515F02340FA0200A00399 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C11515F72340FA0400A00399 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
