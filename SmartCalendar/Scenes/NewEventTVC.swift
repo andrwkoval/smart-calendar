@@ -8,28 +8,54 @@
 
 import UIKit
 
+
 protocol EventAttributeIsChanged: class {
-    func changeWhen(_ time: String)
-    func changeMeetingDuration(_ time: String)
-    func changeTravelTime(_ time: String)
-    func changeInvitees(_ people: Any)
-    func changeAlert(_ time: String)
+    func changeTimeInterval()
+    func changeMeetingDuration()
+    func changeInvitee()
+}
+
+public enum AttributePage {
+    case timeInterval
+    case meetingDuration
+    case invitee
 }
 
 class NewEventTVC: UITableViewController {
-    
-    var whenInterval: String = "Next Week"
-    var travelTime: String = "None"
-    var meetingTimeDuration: String = "1 hour"
+
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        changeTimeInterval()
+        changeMeetingDuration()
+    }
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let tvc = storyBoard.instantiateViewController(withIdentifier: "EventAttributesTVC") as? EventAttributesTVC
+        switch indexPath.section {
+        case 1:
+            tvc?.cellData = EventAttributes.shared.getTimeIntervals()
+            tvc?.page = AttributePage.timeInterval
+            tvc?.title = "When"
+        case 3:
+            tvc?.cellData = EventAttributes.shared.getMeetingDurations()
+            tvc?.page = AttributePage.meetingDuration
+            tvc?.title = "Meeting duration"
+        case 4:
+            print("🔥 need to implement invitee page")
+        default:
+            print(" ")
+        }
+
+        if let tvc = tvc {
+            tvc.delegate = self 
+            tvc.title = title
+            navigationController?.pushViewController(tvc, animated: true)
+        }
+
     }
 
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -38,67 +64,20 @@ class NewEventTVC: UITableViewController {
         return returnedView
     }
 
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
-        let title = cell?.textLabel?.text
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        var vc: UITableViewController?
-        switch title {
-        case "When":
-            vc = storyBoard.instantiateViewController(withIdentifier: "WhenTVC") as? WhenTVC
-        case "Meeting time":
-            vc = storyBoard.instantiateViewController(withIdentifier: "MeetingTimeTVC") as? MeetingTimeTVC
-        case "Average Travel Time":
-            vc = storyBoard.instantiateViewController(withIdentifier: "TravelTimeTVC") as? TravelTimeTVC
-        case "Invitees":
-            print("\(indexPath)")
-        case "Alert":
-            print("\(indexPath)")
-        default:
-            print(" ")
-        }
-
-        if let vc = vc {
-            vc.delegate = self
-            vc.title = title
-            navigationController?.pushViewController(vc, animated: true)
-        }
-
-    }
-
-    func changeCellStateLabel(for cell: String) {
-        switch cell {
-        case "When":
-            tableView.cellForRow(at: IndexPath(row: 0, section: 1))?.detailTextLabel!.text = self.whenInterval
-        case "Meeting time":
-            tableView.cellForRow(at: IndexPath(row: 2, section: 1))?.detailTextLabel!.text = self.meetingTimeDuration
-        case "Average Travel Time":
-            tableView.cellForRow(at: IndexPath(row: 3, section: 1))?.detailTextLabel!.text = self.travelTime
-        default:
-            print("❗️Could not change cell`s attributed state")
-        }
-    }
-
 }
 
 extension NewEventTVC: EventAttributeIsChanged {
-    func changeWhen(_ time: String) {
-        self.whenInterval = time
-        self.changeCellStateLabel(for: "When")
-    }
-    func changeMeetingDuration(_ time: String) {
-        self.meetingTimeDuration = time
+    func changeTimeInterval() {
+        let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 1))
+        cell?.detailTextLabel?.text = EventAttributes.shared.getCurrentTimeInterval()
     }
 
-    func changeTravelTime(_ time: String) {
-        self.travelTime = time
+    func changeMeetingDuration() {
+        let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 3))
+        cell?.detailTextLabel?.text = EventAttributes.shared.getCurrentMeetingTime()
     }
 
-    func changeInvitees(_ people: Any) {
+    func changeInvitee() {
 
-    }
-
-    func changeAlert(_ time: String) {
-        
     }
 }
