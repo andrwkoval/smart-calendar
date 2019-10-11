@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		33EF202027DEE4AF90DB9FA6 /* Pods_SmartCalendarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C523600B46FE0F12FD1238 /* Pods_SmartCalendarTests.framework */; };
 		4580EA9295F4B9A639796B7C /* Pods_SmartCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC54034EDCD4673301D93CD /* Pods_SmartCalendar.framework */; };
+		953727AF234F2DEA00153A2F /* UserSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953727AE234F2DEA00153A2F /* UserSearch.storyboard */; };
+		953727B2234F326200153A2F /* SearchUsersCalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953727B1234F326200153A2F /* SearchUsersCalendarVC.swift */; };
 		95D68E3D2347F3AC00C0A41D /* FindIntersection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D68E3C2347F3AC00C0A41D /* FindIntersection.swift */; };
 		C11515EA2340FA0200A00399 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11515E92340FA0200A00399 /* AppDelegate.swift */; };
 		C11515EC2340FA0200A00399 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11515EB2340FA0200A00399 /* SceneDelegate.swift */; };
@@ -53,6 +55,8 @@
 		05AD02499C75C702B872A914 /* Pods_SmartCalendar_SmartCalendarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartCalendar_SmartCalendarUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC54034EDCD4673301D93CD /* Pods_SmartCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C523600B46FE0F12FD1238 /* Pods_SmartCalendarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartCalendarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		953727AE234F2DEA00153A2F /* UserSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserSearch.storyboard; sourceTree = "<group>"; };
+		953727B1234F326200153A2F /* SearchUsersCalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsersCalendarVC.swift; sourceTree = "<group>"; };
 		95D68E3C2347F3AC00C0A41D /* FindIntersection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindIntersection.swift; sourceTree = "<group>"; };
 		96457AC912D36117849028FF /* Pods-SmartCalendarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartCalendarTests.debug.xcconfig"; path = "Target Support Files/Pods-SmartCalendarTests/Pods-SmartCalendarTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BA443F23E1FCC55B0C661110 /* Pods-SmartCalendar-SmartCalendarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartCalendar-SmartCalendarUITests.release.xcconfig"; path = "Target Support Files/Pods-SmartCalendar-SmartCalendarUITests/Pods-SmartCalendar-SmartCalendarUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +140,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		953727B0234F323B00153A2F /* SearchUsersCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				953727B1234F326200153A2F /* SearchUsersCalendarVC.swift */,
+			);
+			path = SearchUsersCalendar;
+			sourceTree = "<group>";
+		};
+		95D68E3E23489EC600C0A41D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				95D68E3C2347F3AC00C0A41D /* FindIntersection.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		C11515DD2340FA0200A00399 = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +187,7 @@
 				C1B2F8242345EA13002B6776 /* Coordinators */,
 				C1B2F8272347497F002B6776 /* Networking */,
 				C11516202341001D00A00399 /* Scenes */,
+				95D68E3E23489EC600C0A41D /* Helpers */,
 				C115161D2340FC9400A00399 /* Storyboards */,
 				C115161E2340FFC200A00399 /* SupportingFiles */,
 				C115161C2340FC6500A00399 /* Resources */,
@@ -206,6 +227,7 @@
 				C11515F72340FA0400A00399 /* LaunchScreen.storyboard */,
 				C11515EF2340FA0200A00399 /* Main.storyboard */,
 				C1D4EA872345E349009E8694 /* Root.storyboard */,
+				953727AE234F2DEA00153A2F /* UserSearch.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -218,7 +240,6 @@
 				C11515EB2340FA0200A00399 /* SceneDelegate.swift */,
 				C11515FA2340FA0400A00399 /* Info.plist */,
 				C11515F22340FA0200A00399 /* SmartCalendar.xcdatamodeld */,
-				95D68E3C2347F3AC00C0A41D /* FindIntersection.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -234,6 +255,7 @@
 		C11516202341001D00A00399 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				953727B0234F323B00153A2F /* SearchUsersCalendar */,
 				C115161F2341000000A00399 /* Base */,
 				C1D4EA8423453F82009E8694 /* SignIn */,
 				C1B2F8212345E913002B6776 /* Main */,
@@ -387,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C19E513A234106DF00086B88 /* README.md in Resources */,
+				953727AF234F2DEA00153A2F /* UserSearch.storyboard in Resources */,
 				C19E5139234106DF00086B88 /* .swiftlint.yml in Resources */,
 				C19E5138234106DF00086B88 /* .gitignore in Resources */,
 				C11515F92340FA0400A00399 /* LaunchScreen.storyboard in Resources */,
@@ -593,6 +616,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1B2F8262345EA27002B6776 /* RootCoordinator.swift in Sources */,
+				953727B2234F326200153A2F /* SearchUsersCalendarVC.swift in Sources */,
 				95D68E3D2347F3AC00C0A41D /* FindIntersection.swift in Sources */,
 				C11515EE2340FA0200A00399 /* BaseVC.swift in Sources */,
 				C11515EA2340FA0200A00399 /* AppDelegate.swift in Sources */,

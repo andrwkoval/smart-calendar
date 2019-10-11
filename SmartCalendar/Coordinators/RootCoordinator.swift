@@ -11,6 +11,7 @@ import UIKit
 enum AppScreen {
     case auth
     case main
+    case search
 }
 
 final class RootCoordinator {
@@ -32,6 +33,10 @@ final class RootCoordinator {
         case .auth:
             let signInVC = R.storyboard.root().instantiateInitialViewController() as? SignInVC
             window.rootViewController = signInVC
+        case .search:
+            guard let searchVC = R.storyboard.userSearch().instantiateInitialViewController() as? SearchUsersCalendarVC else { return }
+            let navigation = UINavigationController(rootViewController: searchVC)
+            window.rootViewController = navigation
         }
         
         window.makeKeyAndVisible()

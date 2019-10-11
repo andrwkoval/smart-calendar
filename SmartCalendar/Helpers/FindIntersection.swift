@@ -9,7 +9,7 @@
 import Foundation
 import GoogleAPIClientForREST
 
-class FindIntersection {
+final class FindIntersection {
     
     func findIntersection(first: DateInterval, second: DateInterval) -> DateInterval? {
         return first.intersection(with: second)
@@ -19,13 +19,13 @@ class FindIntersection {
                            second: [DateInterval]) -> [DateInterval] {
         var intervals = [DateInterval]()
         
-        for i in 0..<first.count {
-            for j in i..<second.count {
-                if first[i].intersects(second[j]) {
+        for eventOne in 0..<first.count {
+            for eventTwo in eventOne..<second.count {
+                if first[eventOne].intersects(second[eventTwo]) {
                     continue
                 }
-                intervals.append(first[i])
-                intervals.append(second[j])
+                intervals.append(first[eventOne])
+                intervals.append(second[eventTwo])
             }
         }
         
