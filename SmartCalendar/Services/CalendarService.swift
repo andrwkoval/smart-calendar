@@ -42,7 +42,7 @@ final class CalendarService {
     func getCalendarList(completion: @escaping ([GTLRCalendar_CalendarListEntry]?, Error?) -> Void) {
         let query = GTLRCalendarQuery_CalendarListList.query()
         self.service?.executeQuery(query, completionHandler: { (ticket, result, error) in
-            print("ticket: \(ticket)")
+//            print("ticket: \(ticket)")
             if let calendarList = (result as? GTLRCalendar_CalendarList), let items = calendarList.items {
                 items.forEach {
                     print("item: \($0)")

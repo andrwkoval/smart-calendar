@@ -20,6 +20,8 @@ class EventAttributes {
         "None", "5 minutes", "15 minutes", "30 minutes", "1 hour", "1 hour, 30 minutes", "2 hours"
     ]
 
+    private var invitee: String = "None"
+
     private var timeInterval: Int = 0
 
     private var meetingDuration: Int = 0
@@ -36,8 +38,8 @@ class EventAttributes {
         self.meetingDuration = index
     }
 
-    func setInviteee() {
-
+    func setInviteee(to text: String) {
+        self.invitee = text
     }
 
     func getCurrentTimeInterval() -> String {
@@ -46,6 +48,10 @@ class EventAttributes {
 
     func getCurrentMeetingTime() -> String {
         return self.meetingDurations[self.meetingDuration]
+    }
+
+    func getCurrentInvitee() -> String {
+        return self.invitee
     }
 
     func getCurrentTimeInterval() -> Int {

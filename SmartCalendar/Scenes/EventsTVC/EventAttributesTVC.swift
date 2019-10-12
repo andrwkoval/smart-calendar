@@ -21,18 +21,21 @@ class EventAttributesTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
+
         self.selectRow()
     }
 
     func selectRow() {
         var index: Int = 0
-        switch page! {
+        guard let page = page else { return }
+        switch page {
         case .timeInterval:
             index = EventAttributes.shared.getCurrentTimeInterval()
         case .meetingDuration:
             index = EventAttributes.shared.getCurrentMeetingTime()
         default:
             print("🔥 unable to identify current attribute page")
+
         }
         let indexPath = IndexPath(row: index, section: 0)
         self.tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)

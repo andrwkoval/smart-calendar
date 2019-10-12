@@ -21,11 +21,20 @@ public enum AttributePage {
 }
 
 class NewEventTVC: UITableViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
         changeTimeInterval()
         changeMeetingDuration()
+    }
+
+    @IBAction func done(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let tvc = storyBoard.instantiateViewController(withIdentifier: "EventAttributesTVC") as? EventAttributesTVC
+        tvc?.cellData = EventResultsManager.shared.intersect
+        tvc?.title = "Free time"
+        navigationController?.pushViewController(tvc!, animated: true)
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -41,7 +50,11 @@ class NewEventTVC: UITableViewController {
             tvc?.page = AttributePage.meetingDuration
             tvc?.title = "Meeting duration"
         case 4:
-            print("🔥 need to implement invitee page")
+            let storyboard: UIStoryboard = UIStoryboard(name: "UserSearch", bundle: nil)
+            let usersVC = storyboard.instantiateViewController(withIdentifier: "SearchUsersCalendarVC") as? SearchUsersCalendarVC
+                navigationController?.pushViewController(usersVC!, animated: true)
+                usersVC!.delegate = self
+                return
         default:
             print(" ")
         }
@@ -74,6 +87,7 @@ extension NewEventTVC: EventAttributeIsChanged {
     }
 
     func changeInvitee() {
-
+        let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 4))
+        cell?.detailTextLabel?.text = EventAttributes.shared.getCurrentInvitee()
     }
 }

@@ -16,7 +16,11 @@ class SearchUsersCalendarVC: UITableViewController {
     @IBOutlet private weak var searchBar: UISearchBar!
     
     // MARK: - ViewController Lifecycle
-    
+
+    var events: [String] = []
+
+    var delegate: EventAttributeIsChanged?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,8 +31,15 @@ class SearchUsersCalendarVC: UITableViewController {
         
         // todo: - implement function
         
-        return 0
+        return self.events.count
     }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+           let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "reuseIdentifier")
+           cell.textLabel?.text = self.events[indexPath.row]
+           return cell
+    }
+
 }
 
 // MARK: - Extensions
@@ -38,7 +49,11 @@ extension SearchUsersCalendarVC: UISearchBarDelegate {
 //        guard let userID = searchBar.text else { return }
 //
 //        print(userID)
-        
+        self.events = EventResultsManager.shared.events
+        self.tableView.reloadData()
+        EventAttributes.shared.setInviteee(to: searchBar.text!)
+        delegate?.changeInvitee()
+
         CalendarService.shared.getCalendarList { (resultCalendar, error) in
             resultCalendar?.forEach {
                 

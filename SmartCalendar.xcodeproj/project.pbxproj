@@ -12,6 +12,7 @@
 		749E63182347A62200770F37 /* EventAttributesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E63172347A62200770F37 /* EventAttributesTVC.swift */; };
 		749E631A2347AA5D00770F37 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E63192347AA5D00770F37 /* Extensions.swift */; };
 		74ADD04F235098F9007E369F /* EventAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74ADD04E235098F9007E369F /* EventAttributes.swift */; };
+		74C7BC542351D83300DD46AB /* TemporareStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C7BC532351D83300DD46AB /* TemporareStorage.swift */; };
 		C11515EA2340FA0200A00399 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11515E92340FA0200A00399 /* AppDelegate.swift */; };
 		C11515EC2340FA0200A00399 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11515EB2340FA0200A00399 /* SceneDelegate.swift */; };
 		C11515F12340FA0200A00399 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C11515EF2340FA0200A00399 /* Main.storyboard */; };
@@ -63,6 +64,7 @@
 		749E63172347A62200770F37 /* EventAttributesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAttributesTVC.swift; sourceTree = "<group>"; };
 		749E63192347AA5D00770F37 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		74ADD04E235098F9007E369F /* EventAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAttributes.swift; sourceTree = "<group>"; };
+		74C7BC532351D83300DD46AB /* TemporareStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporareStorage.swift; sourceTree = "<group>"; };
 		C11515E62340FA0200A00399 /* SmartCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C11515E92340FA0200A00399 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C11515EB2340FA0200A00399 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 				C11515FA2340FA0400A00399 /* Info.plist */,
 				C11515F22340FA0200A00399 /* SmartCalendar.xcdatamodeld */,
 				749E63192347AA5D00770F37 /* Extensions.swift */,
+				74C7BC532351D83300DD46AB /* TemporareStorage.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -619,7 +622,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/SmartCalendar/SupportingFiles/R.generated.swift",
+				$SRCROOT/SmartCalendar/SupportingFiles/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -662,6 +665,7 @@
 				74ADD04F235098F9007E369F /* EventAttributes.swift in Sources */,
 				C11515EA2340FA0200A00399 /* AppDelegate.swift in Sources */,
 				C1C94F3D23519F2A00B7E14D /* CalendarService.swift in Sources */,
+				74C7BC542351D83300DD46AB /* TemporareStorage.swift in Sources */,
 				C1C94F3323519EF500B7E14D /* SignInVC.swift in Sources */,
 				C1D656182341056600FA9BD7 /* R.generated.swift in Sources */,
 				C1C94F3523519EF500B7E14D /* BaseVC.swift in Sources */,
