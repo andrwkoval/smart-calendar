@@ -28,8 +28,9 @@ final class RootCoordinator {
     
         switch screen {
         case .main:
-            let mainVC = R.storyboard.main().instantiateInitialViewController() as? MainVC
-            window.rootViewController = mainVC
+            guard let mainVC = R.storyboard.main().instantiateInitialViewController() as? NewEventTVC else { return }
+            let navigation = UINavigationController(rootViewController: mainVC)
+            window.rootViewController = navigation
         case .auth:
             let signInVC = R.storyboard.root().instantiateInitialViewController() as? SignInVC
             window.rootViewController = signInVC

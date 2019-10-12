@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         if GIDSignIn.sharedInstance().hasPreviousSignIn() {
             GIDSignIn.sharedInstance().restorePreviousSignIn()
-            RootCoordinator.shared.switch(to: .search, window: self.window)
+            RootCoordinator.shared.switch(to: .main, window: self.window)
         } else {
             RootCoordinator.shared.switch(to: .auth, window: self.window)
         }
