@@ -26,11 +26,15 @@ final class MainVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let username = UserDefaults.standard.string(forKey: "user")
+        let email = UserDataManager.shared.getEmail()
 
-        self.titleText = username
+        self.titleText = email
         
-        CalendarService.shared.getEvents(id: "orenchuky@ucu.edu.ua") { (result, error) in
+        CalendarService.shared.getCalendarList { (_, _) in
+ 
+        }
+        
+        CalendarService.shared.getEvents(id: "ucu.edu.ua_6uvbqfvjrad83kpvjuvs07b3gk@group.calendar.google.com") { (result, error) in
             result?.forEach {
                 print("\($0.start) - \($0.end)")
             }
