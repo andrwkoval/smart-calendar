@@ -26,7 +26,6 @@
 		C1B2F8262345EA27002B6776 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2F8252345EA27002B6776 /* RootCoordinator.swift */; };
 		C1B2F8292347499D002B6776 /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2F8282347499D002B6776 /* CalendarService.swift */; };
 		C1B2F84C23489F36002B6776 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2F84B23489F36002B6776 /* UserDataManager.swift */; };
-		C1B2F84E2348ABC0002B6776 /* FrameworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2F84D2348ABC0002B6776 /* FrameworkService.swift */; };
 		C1D4EA8623453FA8009E8694 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D4EA8523453FA8009E8694 /* SignInVC.swift */; };
 		C1D4EA882345E349009E8694 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1D4EA872345E349009E8694 /* Root.storyboard */; };
 		C1D656182341056600FA9BD7 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D656172341056600FA9BD7 /* R.generated.swift */; };
@@ -80,7 +79,6 @@
 		C1B2F8252345EA27002B6776 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		C1B2F8282347499D002B6776 /* CalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		C1B2F84B23489F36002B6776 /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
-		C1B2F84D2348ABC0002B6776 /* FrameworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkService.swift; sourceTree = "<group>"; };
 		C1D4EA8523453FA8009E8694 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		C1D4EA872345E349009E8694 /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
 		C1D656172341056600FA9BD7 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -220,7 +218,6 @@
 			children = (
 				C1D656172341056600FA9BD7 /* R.generated.swift */,
 				C11515E92340FA0200A00399 /* AppDelegate.swift */,
-				C1B2F84D2348ABC0002B6776 /* FrameworkService.swift */,
 				C11515EB2340FA0200A00399 /* SceneDelegate.swift */,
 				C11515FA2340FA0400A00399 /* Info.plist */,
 				C11515F22340FA0200A00399 /* SmartCalendar.xcdatamodeld */,
@@ -614,7 +611,6 @@
 				C1B2F84C23489F36002B6776 /* UserDataManager.swift in Sources */,
 				C1B2F8292347499D002B6776 /* CalendarService.swift in Sources */,
 				C1D656182341056600FA9BD7 /* R.generated.swift in Sources */,
-				C1B2F84E2348ABC0002B6776 /* FrameworkService.swift in Sources */,
 				C11515EC2340FA0200A00399 /* SceneDelegate.swift in Sources */,
 				C11515F42340FA0200A00399 /* SmartCalendar.xcdatamodeld in Sources */,
 				C1B2F8232345E941002B6776 /* MainVC.swift in Sources */,
